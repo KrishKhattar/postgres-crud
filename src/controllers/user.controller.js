@@ -2,7 +2,7 @@ import asyncHandler from "../utils/asyncHandler.js";
 import { client } from "../config/database.js";
 
 // Create user
-const registerUser = asyncHandler(async (req, res) => {
+const createUser = asyncHandler(async (req, res) => {
   const { name, id } = req.body;
 
   const insert_query = `INSERT INTO demotable (name, id) VALUES ($1, $2)`;
@@ -83,4 +83,4 @@ const deleteUser = asyncHandler(async (req, res) => {
   });
 });
 
-export { registerUser, readUser, updateUser, deleteUser };
+export { createUser, readUser, updateUser, deleteUser };

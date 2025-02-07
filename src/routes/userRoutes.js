@@ -1,6 +1,6 @@
 import express from "express";
 import {
-  registerUser,
+  createUser,
   readUser,
   updateUser,
   deleteUser,
@@ -8,7 +8,7 @@ import {
 
 const router = express.Router();
 
-router.route("/registerUser").post(registerUser);
+router.route("/registerUser").post(createUser);
 router.route("/readUser").post(readUser);
 router.route("/updateUser").post(updateUser);
 router.route("/deleteUser").post(deleteUser);
